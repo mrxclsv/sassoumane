@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@layer components {
+
+  .signal {
+    @apply bg-green-600/40
+  }
+
+  /* =================================================== APP */
+  .App {
+    @apply bg-black overflow-hidden scrollbar-hide
+  }
+  .viewportS {
+    @apply h-[100svh] w-[100svw]
+  }
+
+  /* =================================================== NAVBAR */
+  .MenuLine {
+    @apply w-7 h-[2px] transition origin-center object-center bg-white rounded-lg absolute m-auto
+  }
+
+  .MenuCircle {
+    @apply w-3 !aspect-square bg-primary !rounded-full origin-center absolute mx-auto
+  }
+
+  /* =================================================== BUTTONS  */
+  .socialBtn {
+    @apply rounded-full hover:bg-gray-100/20 !aspect-square w-10 flex center
+  }
+
+  .menuHeader {
+    @apply text-[16px] capitalize tracking-wide text-left font-semibold text-primary mb-6
+  }
+
+  /* =================================================== DIV SETUP */
+
+  .div {
+    @apply flex center
+  }
+
+  .flexV {
+    @apply flex flex-col
+  }
+
+  .center {
+    @apply items-center justify-center
+  }
+
+  .start {
+    @apply items-start justify-center
+  }
+
+  .startAll {
+    @apply items-start justify-start
+  }
+
+  .end {
+    @apply items-center justify-end
+  }
+
+  .endAll {
+    @apply items-end justify-end
+  }
+
+  .flexVStart {
+    @apply flexV start
+  }
+
+  .fit {
+    @apply h-fit w-fit
+  }
+
+  .full {
+    @apply h-full w-full
+  }
+
+  .absoluteAll {
+    @apply top-0 bottom-0 left-0 right-0 m-auto
+  }
+
+  .absoluteX {
+    @apply left-0 right-0 mx-auto
+  }
+
+  .absoluteY {
+    @apply top-0 bottom-0
+  }
+
+  /* =================================================== TEXT */
+  .subHeader {
+    @apply text-sm lg:text-base font-semibold tracking-[10px] text-primary uppercase mb-4 lg:mb-8
+  }
+  /* =================================================== PAGES & LAYOUTS */
+  .page {
+    @apply min-h-[100svh] w-[100svw] flexV relative start overflow-x-hidden scrollbar-hide transition
+  }
+
+  .resp {
+    @apply max-w-5xl w-full mx-auto
+  }
+
+  .wrapper {
+    @apply relative w-full
+  }
+
+  .paddingX {
+    @apply px-8
+  }
+  .paddingAutoFull {
+    @apply p-8 lg:p-16
+  }
+
+  .indent {
+    @apply border-l border-white pl-6 my-6
+  }
+
+  /* ================================================= CUSTOM CSS */
+  .remixicon {
+    @apply text-xl font-light
+  }
+
+  .autoW {
+    @apply w-1/2 lg:w-full
+  }
+
+  .textInactive {
+    @apply text-zinc-200 duration-[1s] ease-in-out cursor-grabbing
+  }
+
+  .textActive {
+    @apply text-zinc-100 duration-[2s]
+  }
+
+  .oneSecond {
+    @apply transition duration-[.6s] ease-in-out
+  }
+
+  .twoSeconds {
+    @apply transition duration-[2s] ease-in-out
+  }
+
+  .animateImage {
+    @apply hover:scale-110 twoSeconds
+  }
+
+  .textGroup {
+    @apply flex flex-col start
+  }
+
+  .DESK {
+    @apply hidden lg:flex
+  }
+
+  .MOB {
+    @apply flex lg:hidden
+  }
+
+  .scaleAppearOFF {
+    @apply scale-x-[95%] opacity-30
+  }
+
+  .scaleAppearON {
+    @apply opacity-100 scale-x-[100%]
+  }
+
+  .textW {
+    @apply max-w-[500px]
+  }
+
+  .navScroll {
+    @apply bg-black
+  }
+  .navDefault {
+    @apply flex h-[100px] w-[100svw] fixed lg:h-fit inset-0 top-0 transition z-[300] overflow-visible 
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+:root {
+  margin: 0;
+  box-sizing: border-box;
+  background: #8D8D8D;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  text-align: center;
+  font-size: medium;
+  color: white;
+  font-family: 'montserrat', sans-serif;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* NavLink {
+  cursor: pointer;
+} */
+
+h1, h2, h3, h4, h5, h6, p, small {
+  line-height: 150%;
+}
+
+
+img {
+  @apply pointer-events-none select-none
+}
+
+h1 {
+  @apply text-[1.45rem] lg:text-[2.986rem] font-[700] 
+}
+h2 {
+  @apply text-lg opacity-20 lg:text-[2.6rem] font-[700] 
+}
+
+h2 {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection {
+  background: rgb(131, 111, 0);
+  color: white;
 }
