@@ -17,12 +17,16 @@ const GoTo = () => {
   // console.group(activeTab, activeParts)
   console.log("active tab is", activeTab)
   console.log("this parts are active", activeParts)
+
+  // useEffect(() =)
+
+  const images = [signIn1, signIn2]
   // console.groupEnd()
 
   return (
-    <div className='viewportS flex center'>
+    <div className='viewportS flex center overflow-hidden'>
 
-      <div className='header absolute absoluteX top-0 pt-10 resp z-[100] bg-gradient-to-b from-blakk/60'>
+      <div className='header absolute absoluteX top-0 pt-10 resp lg:max-w-full z-[100] bg-gradient-to-b from-blakk/60'>
 
         <div className='flex items-center justify-between relative px-8'>
           <img src="/branding/SSMN_group.svg" alt="SSMN" />
@@ -39,19 +43,36 @@ const GoTo = () => {
 
       </div>
 
-      <div className='bgImage overflow-hidden absolute absoluteAll flex center '>
+      <div id="Mob" className='bgImage MOB overflow-hidden absolute absoluteAll center '>
         <img src={
           activeTab === undefined && logoBg ||
           activeTab === "clothing" && signIn1 ||
-          activeTab === "cosmetics" && signIn2 || 
-          lastHover === "clothing" && signIn1 ||  
-          lastHover === "cosmetics" && signIn2  
+          activeTab === "cosmetics" && signIn2 ||
+          lastHover === "clothing" && signIn1 ||
+          lastHover === "cosmetics" && signIn2
         }
           className={`full object-cover`} alt="" />
       </div>
 
+      <div id="Desk" className='bgImage DESK overflow-hidden absolute absoluteAll center '>
+
+        {images.map(item => (
+
+          <NavLink key={item} to="/cosmetics"
+            onMouseEnter={() => setActiveTab(partition === "clothing" && 'clothing' || partition === 'cosmetics' && "cosmetics")}
+            className='w-full flex center relative overflow-hidden group'>
+            <img src={item} className={`full object-cover origin-top object-top opacity-40 oneSecond
+            ${lastHover === "clothing" && item === images[0] && " scale-110 !opacity-100"}
+            ${lastHover === "cosmetics" && item === images[1] && " scale-110 !opacity-100"}
+            `} alt="" />
+            {/* group-hover:opacity-100 opacity-25 oneSecond group-hover:scale-110  */}
+            {/* ${lastHover === 'clothing' ? "opacity-100 scale-110 twoSeconds" : "opacity-50 oneSecond "} */}
+          </NavLink>
+        ))}
+      </div>
+
       <div id="destinations" className='absolute bottom-0 absoluteX flex z-[100]'>
-        <div className='flexV resp end py-10 bg-gradient-to-t from-blakk' >
+        <div className='flexV resp lg:max-w-full end py-10 bg-gradient-to-t from-blakk' >
           <p className='pointer-events-none animate-pulse'>Continuer sur</p>
 
           <ul id="labels" onMouseLeave={() => setActiveTab('')} className='relative py-2 w-full flex center'>
@@ -81,8 +102,8 @@ const GoTo = () => {
               <div id="indicator"
                 className={`w-1/2 lg:w-full max-w-[100px] lg:max-w-[200px] h-[2px] rounded-lg bg-white origin-center
                         opacity-0
-                        ${activeTab === partitions[1] && "-translate-x-[25vw] lg:-translate-x-[100%] scale-y-105 opacity-100 oneSecond"} 
-                        ${activeTab === partitions[2] && "translate-x-[25vw] lg:translate-x-[100%] scale-y-105 opacity-100 oneSecond"} 
+                        ${activeTab === partitions[1] && "-translate-x-[25vw] lg:-translate-x-[25vw] scale-y-105 opacity-100 oneSecond"} 
+                        ${activeTab === partitions[2] && "translate-x-[25vw] lg:translate-x-[25vw] scale-y-105 opacity-100 oneSecond"} 
                         `}
               />
             </div>

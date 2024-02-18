@@ -1,13 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { GoTo } from '../utils/components';
 
 const usePartition = () => {
 
   const navigate = useNavigate()
-  const partitions = [
-    "welcome", "clothing", "cosmetics"];
-  const [partition, setPartition] = useState("welcome")
+  const partitions = ["welcome", "clothing", "cosmetics"];
+  const [partition, setPartition] = useState("cosmetics")
   const [page, setPage] = useState(<GoTo />);
   // const activeParts = ["clothing"] /* SET BY DEFAULT TO 1 TO EXCLUDE NULL */
   const activeParts = ["cosmetics"] /* SET BY DEFAULT TO 1 TO EXCLUDE NULL */
@@ -17,7 +16,7 @@ const usePartition = () => {
     console.log('Number of site parts ', activeParts.length, " which are: ", activeParts)
   }, [partition])
 
-  useEffect(() => {
+  useMemo(() => {
     if (partition === "welcome") {
       setPage(<GoTo />);
     }

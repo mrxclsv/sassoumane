@@ -16,13 +16,15 @@ function App() {
   return (
     <div className="App">
 
+      {/* GO TO IF PARTITION ++ NULL */}
+      {partition === null && <GoTo />}
 
-      <GoTo />
       {/* =============== HEADER */}
       {/* NAVBAR */}
       {/* <Navbar /> */}
       <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/cosmetics" element={<Home />} />
       </Routes>
 
       {/* FOOTER */}
