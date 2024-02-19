@@ -3,29 +3,26 @@ import 'remixicon/fonts/remixicon.css'
 
 import { Routes, Route } from 'react-router-dom';
 import {
-  GoTo,
-  /* COMP */ Home,
+  /* PAGES */ Clothing, Cosmetics,
+  /* COMP */ Navbar,
   /* HOOKS*/ usePartition
 } from './utils/components'
 
+
 function App() {
 
-  const { partition, partitions, page } = usePartition()
+  const { partition, page } = usePartition()
 
 
   return (
     <div className="App">
 
       {/* GO TO IF PARTITION ++ NULL */}
-      {partition === null && <GoTo />}
+      {page}
 
       {/* =============== HEADER */}
       {/* NAVBAR */}
-      {/* <Navbar /> */}
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/cosmetics" element={<Home />} />
-      </Routes>
+      <Navbar partition={partition} />
 
       {/* FOOTER */}
     </div>

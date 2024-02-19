@@ -15,6 +15,7 @@ module.exports = {
       fontFamily: {
         // 'figtree': ['Figtree'],
         'montserrat': ['Montserrat'],
+        'manrope': ['Manrope'],
       },
       colors: {
         blakk: "#000300",

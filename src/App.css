@@ -14,7 +14,7 @@
     @apply bg-black overflow-hidden scrollbar-hide
   }
   .viewportS {
-    @apply h-[100svh] w-[100svw]
+    @apply h-[100svh] w-[100svw] scrollbar-hide
   }
 
   /* =================================================== NAVBAR */
@@ -135,11 +135,11 @@
   }
 
   .oneSecond {
-    @apply transition duration-[.6s] ease-in-out
+    @apply transition duration-[.7s] ease-in-out
   }
 
   .twoSeconds {
-    @apply transition duration-[2s] ease-in-out
+    @apply transition duration-[1.5s] ease-in-out
   }
 
   .animateImage {
@@ -151,11 +151,11 @@
   }
 
   .DESK {
-    @apply hidden lg:flex
+    @apply !hidden lg:flex
   }
 
   .MOB {
-    @apply flex lg:hidden
+    @apply !flex lg:hidden
   }
 
   .scaleAppearOFF {
@@ -189,7 +189,7 @@ body {
   text-align: center;
   font-size: medium;
   color: white;
-  font-family: 'montserrat', sans-serif;
+  font-family:'manrope', 'montserrat',  sans-serif;
 }
 
 /* NavLink {

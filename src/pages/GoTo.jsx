@@ -11,7 +11,7 @@ import { logoBg, signIn1, signIn2 } from '../utils/images'
 const GoTo = () => {
 
   const { partition, partitions, activeParts } = usePartition()
-  const [activeTab, setActiveTab] = useState(undefined)
+  const [activeTab, setActiveTab] = useState("")
   const [lastHover, setLastHover] = useState(undefined)
 
   // console.group(activeTab, activeParts)
@@ -45,11 +45,11 @@ const GoTo = () => {
 
       <div id="Mob" className='bgImage MOB overflow-hidden absolute absoluteAll center '>
         <img src={
-          activeTab === undefined && logoBg ||
-          activeTab === "clothing" && signIn1 ||
-          activeTab === "cosmetics" && signIn2 ||
-          lastHover === "clothing" && signIn1 ||
-          lastHover === "cosmetics" && signIn2
+          (activeTab === "" && logoBg)
+          (activeTab === "clothing" && signIn1)
+          (activeTab === "cosmetics" && signIn2)
+          (lastHover === "clothing" && signIn1)
+          (lastHover === "cosmetics" && signIn2)
         }
           className={`full object-cover`} alt="" />
       </div>
@@ -59,14 +59,13 @@ const GoTo = () => {
         {images.map(item => (
 
           <NavLink key={item} to="/cosmetics"
-            onMouseEnter={() => setActiveTab(partition === "clothing" && 'clothing' || partition === 'cosmetics' && "cosmetics")}
+            onMouseEnter={() => setActiveTab(partition)}
             className='w-full flex center relative overflow-hidden group'>
             <img src={item} className={`full object-cover origin-top object-top opacity-40 oneSecond
             ${lastHover === "clothing" && item === images[0] && " scale-110 !opacity-100"}
             ${lastHover === "cosmetics" && item === images[1] && " scale-110 !opacity-100"}
             `} alt="" />
-            {/* group-hover:opacity-100 opacity-25 oneSecond group-hover:scale-110  */}
-            {/* ${lastHover === 'clothing' ? "opacity-100 scale-110 twoSeconds" : "opacity-50 oneSecond "} */}
+      
           </NavLink>
         ))}
       </div>

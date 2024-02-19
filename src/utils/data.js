@@ -13,9 +13,31 @@ export const project = {
 
 export const navbar = {
   icons: [
-    {title: "user-3"},
-    {title: "search"},
-  ]
+    { title: "user-3" },
+    { title: "search" },
+  ],
+  routes: {
+    cosmetics: {
+      logo: '',
+      links: [
+        { title: "home", link: "/", icon: "home" },
+        { title: "shop", link: "/shop", icon: "shopping-bag" },
+        { title: "about", link: "/about", icon: "information" },
+        { title: "contact", link: "/contact", icon: "customer-service" },
+
+      ]
+    },
+    clothing: {
+      logo: '',
+      links: [
+        { title: "home", link: "/", icon: "home" },
+        { title: "shop", link: "/shop", icon: "shopping-bag" },
+        { title: "collections", link: "/about", icon: "information" },
+        { title: "contact", link: "/contact", icon: "customer-service" },
+
+      ]
+    }
+  }
 }
 
 export const footerLinks = {
