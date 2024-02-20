@@ -21,7 +21,7 @@ const Logo = () => {
 
 
   return (
-    <NavLink to={`/${partition}`} className={`filter invert relative z-[201] `}>
+    <NavLink to={`/${partition}`} className={`filter relative z-[201] `}>
       <img className="w-full object-contain"
         src={source} alt="SSMN" />
     </NavLink>

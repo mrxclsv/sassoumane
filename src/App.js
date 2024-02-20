@@ -1,9 +1,8 @@
 import './App.css';
 import 'remixicon/fonts/remixicon.css'
 
-import { Routes, Route } from 'react-router-dom';
 import {
-  /* PAGES */ Clothing, Cosmetics,
+  /* PAGES */ 
   /* COMP */ Navbar,
   /* HOOKS*/ usePartition
 } from './utils/components'

@@ -12,6 +12,10 @@ export { default as Cosmetics } from '../pages/Cosmetics';
 // C O S M E T I C S
 export { default as Home1 } from '../pages/cosmetics/Home1';
 export { default as About } from '../pages/cosmetics/About';
+export { default as Contact } from '../pages/cosmetics/Contact';
+
+export { default as NewArrivals } from '../components/NewArrivals';
+export { default as Product } from '../components/Product'
 
 
 export { default as Shop } from '../pages/Shop';
@@ -22,8 +26,8 @@ export { default as Navbar } from '../components/@Navigation/Navbar';
 export { default as Footer } from '../components/@Navigation/Footer';
 
 // ASSETS
-// export { default as Logo } from '../components/Logo';
 export { default as Socials } from '../components/Socials';
+export { default as Section } from '../components/Section';
 // export { default as CardDisplay } from '../components/CardDisplay';
 // export { default as SocialsItem } from '../components/SocialsItem';
 // export { default as Manifesto } from "../components/Manifesto";

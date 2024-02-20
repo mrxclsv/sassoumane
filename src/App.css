@@ -95,7 +95,7 @@
   }
   /* =================================================== PAGES & LAYOUTS */
   .page {
-    @apply min-h-[100svh] w-[100svw] flexV relative start overflow-x-hidden scrollbar-hide transition
+    @apply min-h-[100svh] w-[100svw] flexV relative items-center justify-start overflow-x-hidden scrollbar-hide transition
   }
 
   .resp {

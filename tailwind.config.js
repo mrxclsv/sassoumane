@@ -19,7 +19,7 @@ module.exports = {
       },
       colors: {
         blakk: "#000300",
-        primary: "#F7A927",
+        primary: "#6EC1E4",
         secondary: "#079039",
         accent: "#262262",
         dark: "#8D8D8D"
