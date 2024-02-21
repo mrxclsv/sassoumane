@@ -10,6 +10,7 @@
   }
 
   /* =================================================== APP */
+  
   .App {
     @apply bg-black overflow-hidden scrollbar-hide
   }
@@ -28,12 +29,17 @@
   }
 
   /* =================================================== BUTTONS  */
+
   .socialBtn {
     @apply rounded-full hover:bg-gray-100/20 !aspect-square w-10 flex center
   }
 
   .menuHeader {
     @apply text-[16px] capitalize tracking-wide text-left font-semibold text-primary mb-6
+  }
+
+  .actionButton {
+    @apply w-[44px] !aspect-square flex center rounded-full bg-white hover:bg-zinc-100
   }
 
   /* =================================================== DIV SETUP */
@@ -91,14 +97,17 @@
   }
 
   /* =================================================== TEXT */
+
   .subHeader {
     @apply text-sm lg:text-base font-semibold tracking-[10px] text-primary uppercase mb-4 lg:mb-8
   }
+
   .header {
     @apply font-semibold capitalize
   }
 
   /* =================================================== PAGES & LAYOUTS */
+
   .page {
     @apply min-h-[100svh] w-[100svw] flexV relative items-center justify-start overflow-x-hidden scrollbar-hide transition
   }
@@ -124,6 +133,7 @@
   }
 
   /* ================================================= CUSTOM CSS */
+
   .remixicon {
     @apply text-xl font-light
   }
@@ -143,6 +153,7 @@
   .quick {
     @apply transition duration-300 ease-out
   }
+
   .oneSecond {
     @apply transition duration-[.7s] ease-in-out
   }
@@ -186,6 +197,7 @@
   .navDefault {
     @apply flex h-[100px] w-[100svw] fixed lg:h-fit inset-0 top-0 transition z-[300] overflow-visible
   }
+
 }
 
 :root {
@@ -206,14 +218,7 @@ body {
   cursor: pointer;
 } */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-small {
+h1, h2, h3, h4, h5, h6, p, small {
   line-height: 150%;
 }
 
