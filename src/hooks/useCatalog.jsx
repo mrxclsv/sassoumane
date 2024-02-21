@@ -5,6 +5,7 @@ const useCatalog = () => {
     bundle1: { price: 29900 },
     single1: { price: 14900 },
   }
+
   /* CATALOG */
   const catalog = {
 
@@ -16,8 +17,7 @@ const useCatalog = () => {
         images: ["img1", "img2", "img3", "img4"],
         sku: "PRSKU",
         category: ["bundle", "shower gel", "body spray"]
-      },
-      {
+      }, {
         id: "02", title: "Product", price: vars.bundle1.price,
         descr: "This is a description of the product",
         img: "/spinner.gif",
@@ -48,6 +48,7 @@ const useCatalog = () => {
       },
     ]
   }
+
   return { catalog, vars }
 }
 

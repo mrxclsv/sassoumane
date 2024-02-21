@@ -40,20 +40,36 @@ export const navbar = {
   }
 }
 
-export const footerLinks = {
-  mainMenu: [
-    { title: "link", icon: "home", link: "/" },
-    { title: "link", icon: "information", link: "/a-propos" },
-    { title: "link", icon: "folder-2", link: "/projets" },
-    { title: "link", icon: "chat-3", link: "/contact" },
-  ],
-  legalMentions: [
-    { title: "confidentialité", icon: 'spy', link: "/confidentialite" },
-    { title: "CGU", icon: 'file-shield', link: "/cgu" },
-    { title: "mentions légales", icon: 'file-reduce', link: "/mentions-legales" },
-    { title: "Tous droits réservés", icon: 'copyright', link: "" },
-  ],
-}
+export const footerLinks = [
+
+  {
+    header: "Besoin d'aide?",
+    links: [
+      { title: "information de livraison", icon: "", link: "/" },
+      { title: "termes & conditions", icon: "", link: "/" },
+      { title: "retours & remboursements", icon: "", link: "/" },
+      { title: "politique de confidentialité", icon: "", link: "/" },
+    ],
+  },
+  {
+    header: "customer care",
+    links: [
+      { title: "FAQs", icon: "", link: "/" },
+      { title: "nos évènements", icon: "", link: "/" },
+      { title: "conseils", icon: "", link: "/" },
+      { title: "promos", icon: "", link: "/" },
+    ],
+  },
+  {
+    header: "à propos",
+    links: [
+      { title: "FAQs", icon: "", link: "/" },
+      { title: "nos évènements", icon: "", link: "/" },
+      { title: "conseils", icon: "", link: "/" },
+      { title: "promos", icon: "", link: "/" },
+    ],
+  },
+]
 
 
 export const contacts = {

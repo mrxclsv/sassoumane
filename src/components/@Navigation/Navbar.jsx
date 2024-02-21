@@ -13,13 +13,14 @@ const Navbar = () => {
 
   return (
     <div className={`fixed top-0 absoluteX z-[200]`}>
+
       <div className='header absolute absoluteX top-0 resp lg:max-w-full bg-gradient-to-b from-blakk/60='>
 
         <div className='flex items-center justify-between px-8 pt-10 pb-4 ==backdrop-blur-sm'>
-          <div className='bg-gradient-to-b from-blakk to-transparent h-[400px] absolute top-0 absoluteX -translate-y-[200px]' />
+          <div className='bg-gradient-to-b from-blakk to-transparent h-[400px] absolute top-0 absoluteX -translate-y-[300px] pointer-events-none' />
           <div className="MOB flex center">
-            <button   onClick={() => setMenu(true)} type="button"
-                    className={`w-[44px] cursor-pointer !aspect-square mix-blend-difference flex center relative hover: bg-white/10 rounded-full ${!menu ? "translate-y-0 duration-150" : "-translate-y-5 opacity-0"} oneSecond`} >
+            <button onClick={() => setMenu(true)} type="button"
+              className={`w-[44px] cursor-pointer !aspect-square mix-blend-difference flex center relative hover: bg-white/10 rounded-full ${!menu ? "translate-y-0 duration-150" : "-translate-y-5 opacity-0"} oneSecond`} >
               <i className={`ri-menu-5-line remixicon `} />
             </button>
           </div>
@@ -43,7 +44,6 @@ const Navbar = () => {
 
       <div id="" className={`MOB fixed inset-0 bottom-0 h-fit flexV pb-30 bg-white z-[99]   
         ${menu ? "translate-x-0 " : "-translate-y-[105%] "} oneSecond ease-in-out `}>
-        <div onClick={() => setMenu(false)} className='absolute screen flex bg-black/20 z-[1]' />
         <div className={`full flexV center h-fit pt-36 pb-20 ==bg-white relative text-black`}>
 
           <button onClick={() => setMenu(false)} type="button"

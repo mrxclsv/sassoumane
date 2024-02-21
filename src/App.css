@@ -13,8 +13,9 @@
   .App {
     @apply bg-black overflow-hidden scrollbar-hide
   }
+
   .viewportS {
-    @apply h-[100svh] w-[100svw] scrollbar-hide
+    @apply min-h-[100svh] w-[100svw] scrollbar-hide
   }
 
   /* =================================================== NAVBAR */
@@ -93,13 +94,17 @@
   .subHeader {
     @apply text-sm lg:text-base font-semibold tracking-[10px] text-primary uppercase mb-4 lg:mb-8
   }
+  .header {
+    @apply font-semibold capitalize
+  }
+
   /* =================================================== PAGES & LAYOUTS */
   .page {
     @apply min-h-[100svh] w-[100svw] flexV relative items-center justify-start overflow-x-hidden scrollbar-hide transition
   }
 
   .resp {
-    @apply max-w-5xl w-full mx-auto
+    @apply max-w-7xl w-full mx-auto
   }
 
   .wrapper {
@@ -109,6 +114,7 @@
   .paddingX {
     @apply px-8
   }
+
   .paddingAutoFull {
     @apply p-8 lg:p-16
   }
@@ -134,6 +140,9 @@
     @apply text-zinc-100 duration-[2s]
   }
 
+  .quick {
+    @apply transition duration-300 ease-out
+  }
   .oneSecond {
     @apply transition duration-[.7s] ease-in-out
   }
@@ -173,8 +182,9 @@
   .navScroll {
     @apply bg-black
   }
+
   .navDefault {
-    @apply flex h-[100px] w-[100svw] fixed lg:h-fit inset-0 top-0 transition z-[300] overflow-visible 
+    @apply flex h-[100px] w-[100svw] fixed lg:h-fit inset-0 top-0 transition z-[300] overflow-visible
   }
 }
 
@@ -189,14 +199,21 @@ body {
   text-align: center;
   font-size: medium;
   color: white;
-  font-family:'manrope', 'montserrat',  sans-serif;
+  font-family: 'manrope', 'montserrat', sans-serif;
 }
 
 /* NavLink {
   cursor: pointer;
 } */
 
-h1, h2, h3, h4, h5, h6, p, small {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small {
   line-height: 150%;
 }
 
@@ -206,10 +223,11 @@ img {
 }
 
 h1 {
-  @apply text-[1.45rem] lg:text-[2.986rem] font-[700] 
+  @apply text-[1.45rem] lg:text-[2.986rem] font-[700]
 }
+
 h2 {
-  @apply text-lg opacity-20 lg:text-[2.6rem] font-[700] 
+  @apply text-lg opacity-20 lg:text-[2.6rem] font-[700]
 }
 
 h2 {

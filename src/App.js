@@ -12,7 +12,6 @@ function App() {
 
   const { partition, page } = usePartition()
 
-
   return (
     <div className="App">
 

@@ -1,11 +1,13 @@
+import { useParams } from 'react-router-dom'
 import { NewArrivals, Slider } from "../../utils/components"
 
-const Home1 = () => {
+const Home1 = ({productID}) => {
+
 
   return (
     <div className='page scrollbar-hide bg-white'>
-      {/* <Slider /> */}
-      <NewArrivals />
+      <Slider />
+      <NewArrivals productId={productID} />
     </div>
   )
 }

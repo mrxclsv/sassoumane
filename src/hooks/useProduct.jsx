@@ -1,9 +1,9 @@
 import { useCatalog } from '../utils/hooks';
 
-const useProductMockup = () => {
+const useProduct = () => {
 
   const vars = useCatalog()
-  const productMockup =
+  const product =
   {
     title: "Product", price: vars.bundle1,
     descr: "This is a description of the product",
@@ -12,7 +12,7 @@ const useProductMockup = () => {
     category: [""]
   }
 
-  return (productMockup)
+  return (product)
 }
 
-export default useProductMockup
+export default useProduct
